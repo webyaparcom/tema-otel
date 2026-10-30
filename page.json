@@ -1,0 +1,189 @@
+{
+  "data": [
+    {
+      "id": "dotyj9164i",
+      "name": {
+        "tr": "Odalar",
+        "en": "Rooms",
+        "ar": "الغرف"
+      },
+      "description": {
+        "tr": "Fiyatlar tarihe ve doluluğa göre değiştiği için konaklama talebi formundan bilgi alabilirsiniz.",
+        "en": "Because prices vary by date and occupancy, you can ask for details through the stay request form.",
+        "ar": "لأن الأسعار تتغير بحسب التاريخ والإشغال، يمكنك الاستفسار عبر نموذج طلب الإقامة."
+      },
+      "path": "odalar",
+      "icon": "bed",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "42kfme",
+          "kxk4bo",
+          "hgawre"
+        ],
+        "footer": []
+      },
+      "index": 0
+    },
+    {
+      "id": "p6xwojxxlz",
+      "name": {
+        "tr": "Olanaklar",
+        "en": "Facilities",
+        "ar": "المرافق"
+      },
+      "description": {
+        "tr": "Kahvaltı, havuz, otopark ve diğer olanaklar.",
+        "en": "Breakfast, pool, parking and other facilities.",
+        "ar": "الإفطار والمسبح والموقف ومرافق أخرى."
+      },
+      "path": "olanaklar",
+      "icon": "spa",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "o1lt4w",
+          "qi2icr"
+        ],
+        "footer": []
+      },
+      "index": 1
+    },
+    {
+      "id": "6as06e1kg0",
+      "name": {
+        "tr": "Rezervasyon",
+        "en": "Reservation",
+        "ar": "الحجز"
+      },
+      "description": {
+        "tr": "Varış tarihini, saati ve misafir sayısını seçin; talebiniz demo olarak tarayıcınızda oluşturulur. ",
+        "en": "Choose the arrival date, time and number of guests; your request is created in your browser as a demo.",
+        "ar": "اختر تاريخ الوصول والوقت وعدد الضيوف؛ يُنشأ طلبك كعرض تجريبي في متصفحك."
+      },
+      "path": "rezervasyon",
+      "icon": "hotel",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "fnapuk"
+        ],
+        "footer": []
+      },
+      "index": 2
+    },
+    {
+      "id": "1k1es23on4",
+      "name": {
+        "tr": "İptal Koşulları",
+        "en": "Cancellation Terms",
+        "ar": "شروط الإلغاء"
+      },
+      "description": {
+        "tr": "İptal, değişiklik ve cayma hakkı bilgisi.",
+        "en": "Cancellation, change and withdrawal information.",
+        "ar": "معلومات الإلغاء والتعديل وحق العدول."
+      },
+      "path": "iptal-kosullari",
+      "icon": "event_busy",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "ll6fkw"
+        ],
+        "footer": []
+      },
+      "index": 3
+    },
+    {
+      "id": "7s36p23kfd",
+      "name": {
+        "tr": "Galeri",
+        "en": "Gallery",
+        "ar": "المعرض"
+      },
+      "description": {
+        "tr": "Bahçe, havuz, odalar ve kahvaltıdan görüntüler.",
+        "en": "Views of the garden, pool, rooms and breakfast.",
+        "ar": "صور من الحديقة والمسبح والغرف والإفطار."
+      },
+      "path": "galeri",
+      "icon": "photo_library",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "ecat0m"
+        ],
+        "footer": []
+      },
+      "index": 4
+    },
+    {
+      "name": {
+        "tr": "Hakkımızda",
+        "en": "About",
+        "ar": "من نحن"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "url": "",
+      "index": 5,
+      "icon": "info",
+      "desing": {
+        "header": [],
+        "body": [
+          "o8ik8n",
+          "qtsgpj"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Zeytinlik Butik Otel, yerel malzeme ve sade bir hizmetle küçük ölçekli bir konaklama deneyimi sunmayı amaçlayan kurgusal bir demo oteldir. Bu sitedeki belge numaraları, adresler ve fiyat bilgileri kurgusaldır.",
+        "en": "Zeytinlik Boutique Hotel is a fictional demo hotel that aims at a small-scale stay with local produce and simple service. Licence numbers, addresses and prices on this site are fictional.",
+        "ar": "فندق زيتينليك البوتيك فندق تجريبي افتراضي يهدف إلى إقامة صغيرة الحجم بمنتجات محلية وخدمة بسيطة. أرقام الرخص والعناوين والأسعار في هذا الموقع افتراضية."
+      }
+    },
+    {
+      "name": {
+        "tr": "İletişim",
+        "en": "Contact",
+        "ar": "اتصل بنا"
+      },
+      "status": "play",
+      "id": "iletisim",
+      "path": "iletisim",
+      "category": "",
+      "url": "",
+      "index": 6,
+      "icon": "call",
+      "desing": {
+        "header": [],
+        "body": [
+          "k9ct01",
+          "k9mp01"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Adres, telefon, e-posta ve çalışma saatleri.",
+        "en": "Address, phone, e-mail and opening hours.",
+        "ar": "العنوان والهاتف والبريد الإلكتروني وساعات العمل."
+      }
+    }
+  ],
+  "desc": []
+}

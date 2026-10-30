@@ -1,0 +1,39 @@
+{
+  "id": "7s36p23kfd",
+  "name": {
+    "tr": "Galeri",
+    "en": "Gallery",
+    "ar": "المعرض"
+  },
+  "description": {
+    "tr": "Bahçe, havuz, odalar ve kahvaltıdan görüntüler.",
+    "en": "Views of the garden, pool, rooms and breakfast.",
+    "ar": "صور من الحديقة والمسبح والغرف والإفطار."
+  },
+  "keyword": {
+    "tr": "galeri, fotoğraf",
+    "en": "gallery, photos",
+    "ar": "معرض، صور"
+  },
+  "path": "galeri",
+  "icon": "photo_library",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "ecat0m"
+    ],
+    "footer": []
+  },
+  "index": 4,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Galeri",
+    "en": "Gallery",
+    "ar": "المعرض"
+  },
+  "date": "2026-10-30T21:51:48.512Z",
+  "update": "2026-10-30T22:03:37.356Z"
+}

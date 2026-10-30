@@ -1,0 +1,39 @@
+{
+  "id": "6as06e1kg0",
+  "name": {
+    "tr": "Rezervasyon",
+    "en": "Reservation",
+    "ar": "الحجز"
+  },
+  "description": {
+    "tr": "Varış tarihini, saati ve misafir sayısını seçin; talebiniz demo olarak tarayıcınızda oluşturulur. ",
+    "en": "Choose the arrival date, time and number of guests; your request is created in your browser as a demo.",
+    "ar": "اختر تاريخ الوصول والوقت وعدد الضيوف؛ يُنشأ طلبك كعرض تجريبي في متصفحك."
+  },
+  "keyword": {
+    "tr": "butik otel, Ayvalık, konaklama",
+    "en": "boutique hotel, Ayvalik, accommodation",
+    "ar": "فندق بوتيك، آيفاليك، إقامة"
+  },
+  "path": "rezervasyon",
+  "icon": "hotel",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "fnapuk"
+    ],
+    "footer": []
+  },
+  "index": 2,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Rezervasyon",
+    "en": "Reservation",
+    "ar": "الحجز"
+  },
+  "date": "2026-10-30T22:03:37.336Z",
+  "update": "2026-10-30T22:03:37.350Z"
+}

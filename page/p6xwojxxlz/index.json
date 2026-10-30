@@ -1,0 +1,40 @@
+{
+  "id": "p6xwojxxlz",
+  "name": {
+    "tr": "Olanaklar",
+    "en": "Facilities",
+    "ar": "المرافق"
+  },
+  "description": {
+    "tr": "Kahvaltı, havuz, otopark ve diğer olanaklar.",
+    "en": "Breakfast, pool, parking and other facilities.",
+    "ar": "الإفطار والمسبح والموقف ومرافق أخرى."
+  },
+  "keyword": {
+    "tr": "olanaklar, havuz, kahvaltı",
+    "en": "facilities, pool, breakfast",
+    "ar": "مرافق، مسبح، إفطار"
+  },
+  "path": "olanaklar",
+  "icon": "spa",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "o1lt4w",
+      "qi2icr"
+    ],
+    "footer": []
+  },
+  "index": 1,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Olanaklar",
+    "en": "Facilities",
+    "ar": "المرافق"
+  },
+  "date": "2026-10-30T21:51:48.498Z",
+  "update": "2026-10-30T22:03:37.325Z"
+}

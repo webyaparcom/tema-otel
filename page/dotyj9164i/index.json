@@ -1,0 +1,41 @@
+{
+  "id": "dotyj9164i",
+  "name": {
+    "tr": "Odalar",
+    "en": "Rooms",
+    "ar": "الغرف"
+  },
+  "description": {
+    "tr": "Fiyatlar tarihe ve doluluğa göre değiştiği için konaklama talebi formundan bilgi alabilirsiniz.",
+    "en": "Because prices vary by date and occupancy, you can ask for details through the stay request form.",
+    "ar": "لأن الأسعار تتغير بحسب التاريخ والإشغال، يمكنك الاستفسار عبر نموذج طلب الإقامة."
+  },
+  "keyword": {
+    "tr": "butik otel, Ayvalık, konaklama",
+    "en": "boutique hotel, Ayvalik, accommodation",
+    "ar": "فندق بوتيك، آيفاليك، إقامة"
+  },
+  "path": "odalar",
+  "icon": "bed",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "42kfme",
+      "kxk4bo",
+      "hgawre"
+    ],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Odalar",
+    "en": "Rooms",
+    "ar": "الغرف"
+  },
+  "date": "2026-10-30T21:51:48.493Z",
+  "update": "2026-10-30T22:03:37.322Z"
+}
