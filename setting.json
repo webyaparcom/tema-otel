@@ -1,0 +1,54 @@
+{
+  "order": false,
+  "user": false,
+  "description": {
+    "tr": "Zeytinlik Butik Otel: Ayvalık’ta zeytin bahçesi içinde 24 odalı butik otel; odalar, olanaklar ve konaklama talebi. (Demo site)",
+    "en": "Zeytinlik Boutique Hotel: a 24-room boutique hotel in an olive grove in Ayvalik; rooms, facilities and stay requests. (Demo site)",
+    "ar": "فندق زيتينليك البوتيك: فندق بوتيك من 24 غرفة وسط بستان زيتون في آيفاليك، مع الغرف والمرافق وطلب الإقامة. (موقع تجريبي)"
+  },
+  "keyword": {
+    "tr": "butik otel, Ayvalık, konaklama",
+    "en": "boutique hotel, Ayvalik, accommodation",
+    "ar": "فندق بوتيك، آيفاليك، إقامة"
+  },
+  "category": "Kurumsal",
+  "name": "Zeytinlik Butik Otel",
+  "domain": "otel.webyapar.com",
+  "langs": {
+    "tr": true,
+    "en": true,
+    "ar": true,
+    "de": false,
+    "ru": false,
+    "es": false,
+    "fr": false,
+    "it": false,
+    "ja": false,
+    "zh": false,
+    "ko": false,
+    "pt": false
+  },
+  "logo": "logo.png",
+  "multi": false,
+  "publishMode": "static",
+  "font": {
+    "body": "nunito-sans",
+    "heading": "cormorant-garamond",
+    "ar": {
+      "body": "ibm-plex-sans-arabic",
+      "heading": "noto-naskh-arabic"
+    }
+  },
+  "colorScheme": "auto",
+  "theme_color": "#2F6F73",
+  "seo": {
+    "noindex": true
+  },
+  "cssTokens": {
+    "--mx-radius-sm": "10px",
+    "--mx-radius-md": "16px",
+    "--mx-radius-lg": "22px",
+    "--mx-radius-xl": "30px"
+  },
+  "icon": "icon.png"
+}

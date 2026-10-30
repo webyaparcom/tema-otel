@@ -1,0 +1,43 @@
+{
+  "id": "1k1es23on4",
+  "name": {
+    "tr": "İptal Koşulları",
+    "en": "Cancellation Terms",
+    "ar": "شروط الإلغاء"
+  },
+  "description": {
+    "tr": "İptal, değişiklik ve cayma hakkı bilgisi.",
+    "en": "Cancellation, change and withdrawal information.",
+    "ar": "معلومات الإلغاء والتعديل وحق العدول."
+  },
+  "keyword": {
+    "tr": "iptal, değişiklik",
+    "en": "cancellation, changes",
+    "ar": "إلغاء، تعديل"
+  },
+  "path": "iptal-kosullari",
+  "icon": "event_busy",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "ll6fkw"
+    ],
+    "footer": []
+  },
+  "index": 3,
+  "url": "",
+  "text": {
+    "tr": "<h2>İptal ve değişiklik koşulları</h2><p>Varıştan 7 gün öncesine kadar yapılan iptallerde ön ödeme iade edilir; 7 ile 3 gün arasında ilk gece ücreti tutulur; 3 günden sonra ya da gelmeme durumunda tüm konaklama bedeli tahsil edilir. Tarih değişikliği, müsaitliğe bağlı olarak varıştan 3 gün öncesine kadar yapılabilir.</p><p>Belirli bir tarih için yapılan konaklama rezervasyonlarında 6502 sayılı Kanun md. 15/g uyarınca cayma hakkı bulunmaz; iptal ve değişiklik koşulları İptal Koşulları sayfasındadır.</p><p><em>Demo sitedir; koşullar örnektir.</em></p>",
+    "en": "<h2>Cancellation and change terms</h2><p>Cancellations up to 7 days before arrival are refunded in full; between 7 and 3 days the first night is charged; after that, or in case of no-show, the full stay is charged. Dates can be changed up to 3 days before arrival, subject to availability.</p><p>For stays booked for a specific date there is no right of withdrawal under Law No. 6502 art. 15/g; cancellation and change terms are on the Cancellation Terms page.</p><p><em>This is a demo site; the terms are examples.</em></p>",
+    "ar": "<h2>شروط الإلغاء والتعديل</h2><p>تُسترد الدفعة المقدمة بالكامل عند الإلغاء قبل الوصول بسبعة أيام على الأقل؛ وتُحتسب الليلة الأولى بين سبعة وثلاثة أيام؛ وبعد ذلك أو عند عدم الحضور يُحتسب كامل مبلغ الإقامة. يمكن تغيير التواريخ حتى ثلاثة أيام قبل الوصول بحسب التوافر.</p><p>لا يوجد حق عدول في حجوزات الإقامة المحددة بتاريخ معيّن بموجب المادة 15/ز من القانون التركي رقم 6502؛ وشروط الإلغاء والتعديل في صفحة شروط الإلغاء.</p><p><em>هذا موقع تجريبي والشروط أمثلة.</em></p>"
+  },
+  "title": {
+    "tr": "İptal Koşulları",
+    "en": "Cancellation Terms",
+    "ar": "شروط الإلغاء"
+  },
+  "date": "2026-10-30T21:51:48.503Z",
+  "update": "2026-10-30T22:03:37.328Z"
+}

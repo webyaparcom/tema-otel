@@ -1,0 +1,47 @@
+{
+  "name": {
+    "tr": "Hakkımızda",
+    "en": "About",
+    "ar": "من نحن"
+  },
+  "status": "play",
+  "category": "",
+  "id": "hakkimizda",
+  "url": "",
+  "path": "hakkimizda",
+  "index": 5,
+  "icon": "info",
+  "desing": {
+    "header": [],
+    "body": [
+      "o8ik8n",
+      "qtsgpj"
+    ],
+    "footer": []
+  },
+  "pathnext": "",
+  "description": {
+    "tr": "Zeytinlik Butik Otel, yerel malzeme ve sade bir hizmetle küçük ölçekli bir konaklama deneyimi sunmayı amaçlayan kurgusal bir demo oteldir. Bu sitedeki belge numaraları, adresler ve fiyat bilgileri kurgusaldır.",
+    "en": "Zeytinlik Boutique Hotel is a fictional demo hotel that aims at a small-scale stay with local produce and simple service. Licence numbers, addresses and prices on this site are fictional.",
+    "ar": "فندق زيتينليك البوتيك فندق تجريبي افتراضي يهدف إلى إقامة صغيرة الحجم بمنتجات محلية وخدمة بسيطة. أرقام الرخص والعناوين والأسعار في هذا الموقع افتراضية."
+  },
+  "spot": {
+    "tr": "",
+    "en": "",
+    "ar": ""
+  },
+  "desc": {},
+  "title": {
+    "tr": "Hakkımızda",
+    "en": "About",
+    "ar": "من نحن"
+  },
+  "keyword": {
+    "tr": "hakkımızda",
+    "en": "about",
+    "ar": "من نحن"
+  },
+  "text": {},
+  "update": "2026-10-30T22:03:37.359Z",
+  "date": "2026-10-30"
+}
