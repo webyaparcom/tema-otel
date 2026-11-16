@@ -1,393 +1,355 @@
-<div class="modulex-out" data-stil="--stil--">
-  <div class="modulex">
-    <div class="modulex-left">
-      <img
-        src="/img/{{id}}/{{img}}?v={{random}}"
-        class="modulex-left-img"
-        alt="{{title}}"
-      />
+<section class="modulex-tnm{{tnmsinif}}" aria-labelledby="tnm-{{id}}-baslik">
+  <div class="modulex-tnm-ic">
+    <div class="modulex-tnm-yazi" data-wm-tts-metin>
+      {{tnmust}}
+      <h2 class="modulex-tnm-baslik" id="tnm-{{id}}-baslik">{{tnmbaslik}}</h2>
+      {{tnmmetin}}
+      {{tnmdinle}}
+      {{tnmmaddeler}}
+      {{tnmcta}}
     </div>
-    <div class="modulex-right">
-      <div class="modulex-right-body">
-        <div class="modulex-right-body-name">{{name}}</div>
-        <div class="modulex-right-body-spot">{{description}}</div>
-        <div class="modulex-right-body-chile">
-          <div class="modulex-right-body-chile-row">
-            <div class="modulex-right-body-chile-row-name">{{icon2html}}{{name2}}</div>
-            <div class="modulex-right-body-chile-row-spot">{{spot2}}</div>
-          </div>
-          <div class="modulex-right-body-chile-row">
-            <div class="modulex-right-body-chile-row-name">{{icon3html}}{{name3}}</div>
-            <div class="modulex-right-body-chile-row-spot">{{spot3}}</div>
-          </div>
-        </div>
+    <div class="modulex-tnm-yan">
+      <div class="modulex-tnm-medya" data-wm-ai-yuva="tanitim" data-sure="{{tnmsure}}">
+        {{tnmmedya}}
+        {{tnmkontrol}}
       </div>
+      {{tnmses}}
     </div>
   </div>
-</div>
+</section>
+
 <style>
-  .modulex-out {
-    background-color: --bgcolor--;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: --fontcolor--;
-    margin: --margintop--px 0px --marginbotton--px 0px;
-    float: left;
-  }
-
-  .modulex-right-body-chile {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-top: 15px;
-  }
-
-  .modulex-right-body-chile-row {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    border: solid;
-    border-style: dashed;
-    border-width: 0px 0px 0px 5px;
-    padding-left: 10px;
-  }
-
-  .modulex-right-body-chile-row-name {
-    font-size: 22px;
-    font-weight: 500;
-  }
-
-  .modulex-right-body-chile-row-spot {
-    font-size: 18px;
-  }
-
-  .modulex-right-body {
-    width: 100%;
-    margin-left: 200px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 10px;
-  }
-
-  .modulex-right-body-name {
-    font-size: 28px;
-    font-weight: 500;
-  }
-
-  .modulex-right-body-spot {
-    font-size: 18px;
-  }
-
-  .modulex {
-    width: var(--max);
-    display: flex;
-    flex-direction: row;
-    min-height: 400px;
-    float: left;
-  }
-
-  .modulex-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .modulex-left {
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-  }
-
-  .modulex-left-img {
-    aspect-ratio: 1/1;
-    border-radius: 100%;
-    width: 300px;
-    background-color: bisque;
-    margin-right: -150px;
-    border: solid 15px #fff;
-    box-shadow: 0 4px 40px rgba(29, 27, 76, 0.32);
-  }
-
-  @media screen and (max-width: 1024px) {
-    .modulex {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      min-height: 400px;
-      float: left;
-      padding: 15px 0px 15px 0px;
-    }
-
-    .modulex-left-img {
-      width: calc(var(--max) / 2);
-      max-width: 200px;
-      margin-right: 0px;
-      float: left;
-    }
-
-    .modulex-right-body {
-      margin-left: 0;
-      padding: 10px;
-    }
-
-    .modulex-left {
-      justify-content: center;
-      background-color: --bgcolor--;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .modulex {
-      width: var(--max);
-      display: flex;
-      flex-direction: row;
-      min-height: 400px;
-    }
-
-    .modulex-right-body-chile-row {
-      flex: 1;
-    }
-
-    .modulex-right {
-      flex: 5;
-    }
-
-    .modulex-left {
-      flex: 1;
-    }
-  }
-
-  /* W2 — animasyon, mobil, erisilebilirlik */
-  @keyframes modulexW2Enter {
-    from { opacity: 0.98; }
-    to { opacity: 1; }
-  }
-
-  [class*="modulex"] {
+  /* tanitim-medya — medya-hazır tanıtım (15 Kas 2026, G4 · D17–D19). module-1 görsel + vizyon/misyon bloklarıdır; bu modül metin sütunu
+     (TTS «Dinle» düğmesi, ikonlu maddeler) + dikey medya paneli (30 sn video yuvası, oynat düğmesi ve ilerleme halkası) + altında ses
+     oynatıcı kartı. stil: yan (iki sütun) · genis (medya üstte 21:9, metin altta). Renkler desing'den; mantıksal CSS → RTL. */
+  .modulex-tnm {
     box-sizing: border-box;
-    animation: modulexW2Enter 0.3s ease;
-    transition: opacity 0.25s ease, transform 0.25s ease;
+    width: 100%;
+    padding: clamp(56px, 8vw, 112px) 20px;
+    background: --bg--;
+    color: --text--;
+    font-size: 1rem;
+    font-family: var(--mx-font-sans, inherit);
   }
-
-  a, button, [role="button"], input[type="submit"], input[type="button"] {
-    cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
-    [class*="modulex"] {
-      max-width: 100%;
-      overflow-x: hidden;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    [class*="modulex"] {
-      animation: none !important;
-      transition: none !important;
-    }
-  }
-
-  /* ---- G8-D varyantlar (31 Eki 2026): desing.stil → kök data-stil. "" = klasik (yuvarlak görsel, yukarıdaki kurallar aynen).
-     Bant zemini/yazısı --bgcolor--/--fontcolor-- çifti kalır; eklenen renkler yalnız var(--mx-site-*) token ya da currentColor türevi. ---- */
-
-  /* ortak: üç varyantta da beyaz daire çerçevesi yok, görsel bandın dışına/önüne çıkar */
-  [data-stil="yuzen-gorsel"] .modulex-left,
-  [data-stil="cerceve-ofset"] .modulex-left,
-  [data-stil="ikon-liste"] .modulex-left {
-    background-color: transparent;
-    justify-content: center;
-    flex: 2;
-  }
-
-  [data-stil="yuzen-gorsel"] .modulex-right-body,
-  [data-stil="cerceve-ofset"] .modulex-right-body,
-  [data-stil="ikon-liste"] .modulex-right-body {
-    margin-left: 0;
-    margin-inline-start: 40px;
-  }
-
-  [data-stil="yuzen-gorsel"] .modulex-left-img,
-  [data-stil="cerceve-ofset"] .modulex-left-img,
-  [data-stil="ikon-liste"] .modulex-left-img {
-    border: 0;
-    margin-right: 0;
-    object-fit: cover;
-    background-color: var(--mx-site-surface, #fff);
-  }
-
-  /* yuzen-gorsel — dikey kart, bandın üstüne/altına taşar, hafif eğik, hover'da düzelir */
-  [data-stil="yuzen-gorsel"] .modulex {
-    min-height: 360px;
-  }
-
-  [data-stil="yuzen-gorsel"] .modulex-left-img {
-    width: min(340px, 100%);
-    aspect-ratio: 4 / 5;
-    border-radius: var(--mx-radius-xl, 28px);
-    margin: -56px 0;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
-    transform: rotate(-2.5deg);
-    transition: transform 0.3s ease;
-  }
-
-  [data-stil="yuzen-gorsel"]:hover .modulex-left-img {
-    transform: rotate(0deg);
-  }
-
-  [data-stil="yuzen-gorsel"] .modulex-right-body-chile-row {
-    border-style: solid;
-    border-color: var(--mx-site-accent, var(--mx-site-primary, #DE6D26));
-    border-width: 0 0 0 3px;
-    border-inline-start-width: 3px;
-    border-inline-end-width: 0;
-  }
-
-  /* cerceve-ofset — kare görsel, arkasında kaymış dolu renk çerçeve (offset gölge = çerçeve) */
-  [data-stil="cerceve-ofset"] .modulex-left {
-    padding: 24px 40px 44px 24px;
-    padding-inline: 24px 44px;
-  }
-
-  [data-stil="cerceve-ofset"] .modulex-left-img {
-    width: min(320px, 100%);
-    aspect-ratio: 1 / 1;
-    border-radius: var(--mx-radius-md, 14px);
-    /* çerçeve: primary + contrast karışımı — bant zemini primary'ye yakınsa da (lacivert/lacivert) ayrışır */
-    box-shadow: 20px 20px 0 0 color-mix(in srgb, var(--mx-site-primary, #DE6D26) 55%, var(--mx-site-primary-contrast, #fff));
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-  }
-
-  [dir="rtl"] [data-stil="cerceve-ofset"] .modulex-left-img {
-    box-shadow: -20px 20px 0 0 color-mix(in srgb, var(--mx-site-primary, #DE6D26) 55%, var(--mx-site-primary-contrast, #fff));
-  }
-
-  [data-stil="cerceve-ofset"]:hover .modulex-left-img {
-    box-shadow: 12px 12px 0 0 color-mix(in srgb, var(--mx-site-primary, #DE6D26) 55%, var(--mx-site-primary-contrast, #fff));
-    transform: translate(4px, 4px);
-  }
-
-  [dir="rtl"] [data-stil="cerceve-ofset"]:hover .modulex-left-img {
-    box-shadow: -12px 12px 0 0 color-mix(in srgb, var(--mx-site-primary, #DE6D26) 55%, var(--mx-site-primary-contrast, #fff));
-    transform: translate(-4px, 4px);
-  }
-
-  [data-stil="cerceve-ofset"] .modulex-right-body-chile-row {
-    border-style: solid;
-    border-color: var(--mx-site-primary, #DE6D26);
-    border-width: 0 0 0 3px;
-    border-inline-start-width: 3px;
-    border-inline-end-width: 0;
-  }
-
-  /* ikon-liste — yatay görsel, vizyon/misyon satırları ikonlu madde listesi (ikon back.js'ten, yalnız bu stilde) */
-  [data-stil="ikon-liste"] .modulex-left-img {
-    width: min(400px, 100%);
-    aspect-ratio: 4 / 3;
-    border-radius: var(--mx-radius-lg, 20px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-  }
-
-  [data-stil="ikon-liste"] .modulex-right-body-chile {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  [data-stil="ikon-liste"] .modulex-right-body-chile-row {
-    border: 0;
-    padding: 16px 18px;
-    padding-left: 18px;
-    border-radius: var(--mx-radius-md, 12px);
-    background-color: color-mix(in srgb, currentColor 8%, transparent);
-    transition: background-color 0.25s ease, transform 0.25s ease;
-  }
-
-  [data-stil="ikon-liste"] .modulex-right-body-chile-row:hover {
-    background-color: color-mix(in srgb, currentColor 14%, transparent);
-    transform: translateX(4px);
-  }
-
-  [dir="rtl"] [data-stil="ikon-liste"] .modulex-right-body-chile-row:hover {
-    transform: translateX(-4px);
-  }
-
-  [data-stil="ikon-liste"] .modulex-right-body-chile-row-name {
-    display: flex;
+  .modulex-tnm *,
+  .modulex-tnm *::before,
+  .modulex-tnm *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-tnm :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  .modulex-tnm-ic {
+    display: grid;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    gap: clamp(32px, 6vw, 88px);
     align-items: center;
-    gap: 14px;
+    max-width: --max--;
+    margin-inline: auto;
   }
-
-  [data-stil="ikon-liste"] .modulex-chile-icon {
-    flex: 0 0 48px;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+  .modulex-tnm--medya-basta .modulex-tnm-yan { order: -1; }
+  .modulex-tnm--genis .modulex-tnm-ic { grid-template-columns: minmax(0, 1fr); }
+  .modulex-tnm--genis .modulex-tnm-yan { order: -1; }
+  .modulex-tnm-ust { margin: 0 0 14px; color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-tnm-baslik { margin: 0; font-family: var(--mx-font-heading, inherit); font-size: clamp(2rem, 4vw, 3.3rem); font-weight: 750; letter-spacing: -0.03em; line-height: 1.06; }
+  .modulex-tnm-metin { margin: 20px 0 0; color: --muted--; font-size: 1.08rem; line-height: 1.75; }
+  .modulex-tnm-dinle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-block-start: 18px;
+    padding: 8px 16px 8px 12px;
+    border: 1px solid --cizgi--;
+    border-radius: 999px;
+    background: transparent;
+    color: --text--;
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 650;
+    cursor: pointer;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+  }
+  .modulex-tnm-dinle[hidden] { display: none; }
+  .modulex-tnm-dinle:hover { border-color: --accent--; }
+  .modulex-tnm-dinle[aria-pressed="true"] { background: --accent--; border-color: --accent--; color: --accentText--; }
+  .modulex-tnm-dinle[aria-pressed="true"] .material-symbols-outlined { animation: modulex-tnm-nabiz 1.2s ease-in-out infinite; }
+  .modulex-tnm-dinle:focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-tnm-maddeler { display: grid; gap: 20px; margin: 32px 0 0; padding: 0; list-style: none; }
+  .modulex-tnm--genis .modulex-tnm-maddeler { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+  .modulex-tnm-maddeler li { display: flex; align-items: flex-start; gap: 16px; }
+  .modulex-tnm-maddeler .material-symbols-outlined {
+    flex-shrink: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
-    background-color: var(--mx-site-primary, #DE6D26);
-    color: var(--mx-site-primary-contrast, #fff);
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: color-mix(in srgb, --accent-- 14%, transparent);
+    color: --accentInk--;
   }
-
-  [data-stil="ikon-liste"] .modulex-right-body-chile-row-spot {
-    padding-inline-start: 62px;
-    opacity: 0.9;
+  .modulex-tnm-imge { flex-shrink: 0; width: 10px; height: 10px; margin-block-start: 8px; border-radius: 50%; background: --accent--; }
+  .modulex-tnm-maddeler h3 { margin: 0; font-size: 1.05rem; font-weight: 700; }
+  .modulex-tnm-maddeler p { margin: 4px 0 0; color: --muted--; line-height: 1.6; }
+  .modulex-tnm-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-block-start: 32px;
+    padding: 14px 24px;
+    border-radius: 999px;
+    background: --accent--;
+    color: --accentText--;
+    font-weight: 650;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
+  .modulex-tnm-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -14px --accent--; }
+  .modulex-tnm-cta:focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
 
-  @media screen and (max-width: 1024px) {
-    [data-stil="yuzen-gorsel"] .modulex-left-img,
-    [data-stil="cerceve-ofset"] .modulex-left-img,
-    [data-stil="ikon-liste"] .modulex-left-img {
-      width: min(320px, calc(100% - 48px));
-      max-width: none;
-    }
-
-    [data-stil="yuzen-gorsel"] .modulex-left-img {
-      margin: -24px 0 12px;
-      transform: none;
-    }
-
-    [data-stil="cerceve-ofset"] .modulex-left {
-      padding: 12px 32px 32px 12px;
-      padding-inline: 12px 32px;
-    }
-
-    [data-stil="yuzen-gorsel"] .modulex-left,
-    [data-stil="cerceve-ofset"] .modulex-left,
-    [data-stil="ikon-liste"] .modulex-left {
-      background-color: transparent;
-    }
-
-    [data-stil="yuzen-gorsel"] .modulex-right-body,
-    [data-stil="cerceve-ofset"] .modulex-right-body,
-    [data-stil="ikon-liste"] .modulex-right-body {
-      margin-inline-start: 0;
-    }
-
-    [data-stil="ikon-liste"] .modulex-right-body-chile-row-spot {
-      padding-inline-start: 0;
-    }
+  .modulex-tnm-yan { position: relative; }
+  .modulex-tnm-medya {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    border-radius: --yuvarlak--;
+    background: --medyaBg--;
+    isolation: isolate;
   }
-
-  /* dar ekranda vizyon/misyon alt alta (klasikte yan yana sıkışıyor; varyantlarda düzeltildi) */
-  @media screen and (max-width: 768px) {
-    [data-stil="yuzen-gorsel"] .modulex-right-body-chile,
-    [data-stil="cerceve-ofset"] .modulex-right-body-chile,
-    [data-stil="ikon-liste"] .modulex-right-body-chile {
-      flex-direction: column;
-      gap: 14px;
-    }
+  .modulex-tnm--genis .modulex-tnm-medya { aspect-ratio: 21 / 9; }
+  .modulex-tnm-poster,
+  .modulex-tnm-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .modulex-tnm-video { z-index: 1; opacity: 0; transition: opacity 0.4s ease; }
+  .modulex-tnm-video[autoplay],
+  .modulex-tnm--oynuyor .modulex-tnm-video { opacity: 1; }
+  .modulex-tnm-yuva {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 30% 25%, color-mix(in srgb, --accent-- 55%, transparent), transparent 55%),
+      radial-gradient(circle at 75% 80%, color-mix(in srgb, --accent-- 30%, --medyaBg--), transparent 60%),
+      --medyaBg--;
+    color: color-mix(in srgb, --accentText-- 70%, transparent);
   }
+  .modulex-tnm-yuva .material-symbols-outlined { position: relative; font-size: 56px; }
+  .modulex-tnm-yuva-isik {
+    position: absolute;
+    inset: -40%;
+    background: conic-gradient(from 0deg, transparent, color-mix(in srgb, --accent-- 25%, transparent), transparent 30%);
+    animation: modulex-tnm-don 14s linear infinite;
+  }
+  .modulex-tnm-sure {
+    position: absolute;
+    inset-block-start: 16px;
+    inset-inline-start: 16px;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: --kontrolBg--;
+    color: --kontrolText--;
+    font-size: 0.8rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  .modulex-tnm-sure .material-symbols-outlined { font-size: 16px; }
+  .modulex-tnm-kontrol {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: --kontrolBg--;
+    color: --kontrolText--;
+    translate: -50% -50%;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+    transition: transform 0.25s ease, opacity 0.25s ease, inset 0.35s ease, width 0.35s ease, height 0.35s ease;
+  }
+  [dir="rtl"] .modulex-tnm-kontrol { translate: 50% -50%; }
+  .modulex-tnm-kontrol:hover { transform: scale(1.06); }
+  .modulex-tnm-kontrol:focus-visible { outline: 3px solid --kontrolText--; outline-offset: 3px; }
+  .modulex-tnm--oynuyor .modulex-tnm-kontrol,
+  .modulex-tnm-kontrol[data-kip="dongu"] {
+    inset-block-start: auto;
+    inset-block-end: 16px;
+    inset-inline-start: auto;
+    inset-inline-end: 16px;
+    width: 52px;
+    height: 52px;
+    translate: none;
+  }
+  .modulex-tnm--oynuyor .modulex-tnm-kontrol[data-kip="tikla"] { inset-block-end: 64px; }
+  .modulex-tnm-halka { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+  .modulex-tnm-halka circle { fill: none; stroke: color-mix(in srgb, --kontrolText-- 25%, transparent); stroke-width: 3; }
+  .modulex-tnm-halka .modulex-tnm-halka-dolu {
+    stroke: --kontrolText--;
+    stroke-dasharray: 100;
+    stroke-dashoffset: calc(100 - var(--tnm-ilerleme, 0) * 100);
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.25s linear;
+  }
+  .modulex-tnm-kontrol .material-symbols-outlined { position: relative; font-size: 30px; }
+  .modulex-tnm-kontrol[aria-pressed="true"] .modulex-tnm-ikon-oynat,
+  .modulex-tnm-kontrol[aria-pressed="false"] .modulex-tnm-ikon-durdur { display: none; }
 
+  .modulex-tnm-ses {
+    position: relative;
+    z-index: 4;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 6px 12px;
+    align-items: center;
+    width: min(92%, 420px);
+    margin-block-start: -48px;
+    margin-inline: auto 0;
+    margin-inline-end: -16px;
+    padding: 14px 16px;
+    border: 1px solid --cizgi--;
+    border-radius: 18px;
+    background: --kartBg--;
+    box-shadow: 0 24px 48px -24px color-mix(in srgb, --text-- 40%, transparent);
+    animation: modulex-tnm-gel 0.7s 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .modulex-tnm-ses > .material-symbols-outlined { grid-row: span 2; color: --accent--; font-size: 30px; }
+  .modulex-tnm-ses-baslik { margin: 0; font-size: 0.92rem; font-weight: 700; }
+  .modulex-tnm-audio { width: 100%; height: 40px; }
+  .modulex-tnm-ses:not(:has(.modulex-tnm-ses-baslik)) .modulex-tnm-audio { grid-row: span 2; }
+  @keyframes modulex-tnm-gel { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+  @keyframes modulex-tnm-don { to { transform: rotate(360deg); } }
+  @keyframes modulex-tnm-nabiz { 50% { transform: scale(1.18); } }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-tnm-baslik { letter-spacing: 0; line-height: 1.35; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-tnm-ust { letter-spacing: 0; }
+
+  @media (max-width: 1024px) {
+    .modulex-tnm-ic { grid-template-columns: minmax(0, 1fr); }
+    .modulex-tnm-yan { order: -1; max-width: 640px; }
+    .modulex-tnm-medya { aspect-ratio: 16 / 11; }
+    .modulex-tnm-ses { margin-inline-end: 12px; }
+  }
+  @media (max-width: 768px) {
+    .modulex-tnm-medya,
+    .modulex-tnm--genis .modulex-tnm-medya { aspect-ratio: 4 / 3; }
+    .modulex-tnm-ses { width: calc(100% - 24px); margin-inline: 12px; margin-block-start: -36px; }
+    .modulex-tnm-kontrol { width: 64px; height: 64px; }
+  }
   @media (prefers-reduced-motion: reduce) {
-    [data-stil="yuzen-gorsel"] .modulex-left-img,
-    [data-stil="cerceve-ofset"]:hover .modulex-left-img,
-    [data-stil="ikon-liste"] .modulex-right-body-chile-row:hover {
-      transform: none !important;
-    }
+    .modulex-tnm * { animation: none !important; transition: none !important; }
   }
 </style>
+
+<script>
+  (() => {
+    const kok = document.querySelector(".modulex-tnm");
+    if (!kok || kok.dataset.tnmHazir) return;
+    kok.dataset.tnmHazir = "1";
+    const sinif = kok.classList[0];
+    const azHareket = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    /* --- 30 sn video yuvası (D19) --- */
+    const video = kok.querySelector("video");
+    const dugme = video ? kok.querySelector("[data-kip]") : null;
+    if (video && dugme) {
+      const sure = Math.min(30, Number(kok.querySelector("[data-sure]")?.dataset.sure) || 30);
+      const dongu = dugme.dataset.kip === "dongu";
+      let kullaniciDurdurdu = false;
+      const durum = () => {
+        const oynuyor = !video.paused && !video.ended;
+        dugme.setAttribute("aria-pressed", oynuyor ? "true" : "false");
+        dugme.setAttribute("aria-label", oynuyor ? dugme.dataset.durdur : dugme.dataset.oynat);
+        if (!dongu) kok.classList.toggle(sinif + "--oynuyor", oynuyor || video.currentTime > 0);
+      };
+      const oynat = () => video.play().catch(() => durum());
+      video.addEventListener("timeupdate", () => {
+        const sinir = Math.min(sure, video.duration || sure);
+        if (video.currentTime >= sinir) {
+          video.currentTime = 0;
+          if (!dongu) { video.pause(); kok.classList.remove(sinif + "--oynuyor"); }
+        }
+        dugme.style.setProperty("--tnm-ilerleme", String(Math.min(1, video.currentTime / sinir)));
+      });
+      video.addEventListener("play", durum);
+      video.addEventListener("pause", durum);
+      dugme.addEventListener("click", () => {
+        if (video.paused) {
+          kullaniciDurdurdu = false;
+          if (!dongu) { video.muted = false; video.controls = true; }
+          oynat();
+        } else { kullaniciDurdurdu = true; video.pause(); }
+      });
+      if (dongu) {
+        const hareketKontrol = () => { if (azHareket.matches) { video.pause(); video.removeAttribute("autoplay"); } };
+        hareketKontrol();
+        azHareket.addEventListener("change", hareketKontrol);
+        if ("IntersectionObserver" in window) {
+          new IntersectionObserver((g) => {
+            if (!g[0]) return;
+            if (g[0].isIntersecting) { if (!kullaniciDurdurdu && !azHareket.matches && video.hasAttribute("autoplay")) oynat(); }
+            else if (!video.paused) video.pause();
+          }, { threshold: 0.2 }).observe(video);
+        }
+      }
+      durum();
+    }
+
+    /* --- TTS «Dinle» yuvası: kayıt (data-ses) → yoksa tarayıcı sesi (sayfa dilinde) → ikisi de yoksa düğme gizli --- */
+    const dinle = kok.querySelector("[data-wm-tts-yuva]");
+    if (!dinle) return;
+    const dil = (document.documentElement.lang || "").toLowerCase();
+    const etiket = dinle.querySelector("span:last-child");
+    let kayit = null;
+    const yaz = (acik) => {
+      dinle.setAttribute("aria-pressed", acik ? "true" : "false");
+      if (etiket) etiket.textContent = acik ? dinle.dataset.durdur : dinle.dataset.dinle;
+    };
+    const metin = () => {
+      const kopya = kok.querySelector("[data-wm-tts-metin]").cloneNode(true);
+      kopya.querySelectorAll("button, a, [aria-hidden='true']").forEach((x) => x.remove());
+      return kopya.textContent.replace(/\s+/g, " ").trim();
+    };
+    if (dinle.dataset.ses) {
+      dinle.hidden = false;
+      dinle.addEventListener("click", () => {
+        if (!kayit) {
+          kayit = new Audio(dinle.dataset.ses);
+          kayit.addEventListener("ended", () => yaz(false));
+          kayit.addEventListener("pause", () => yaz(false));
+          kayit.addEventListener("play", () => yaz(true));
+        }
+        if (kayit.paused) kayit.play().catch(() => yaz(false));
+        else { kayit.pause(); kayit.currentTime = 0; }
+      });
+      return;
+    }
+    if (!("speechSynthesis" in window) || !dil) return;
+    const ses = () => speechSynthesis.getVoices().find((v) => v.lang && v.lang.toLowerCase().split(/[-_]/)[0] === dil.split("-")[0]);
+    const hazirla = () => { if (ses()) dinle.hidden = false; };
+    hazirla();
+    speechSynthesis.addEventListener?.("voiceschanged", hazirla);
+    dinle.addEventListener("click", () => {
+      if (speechSynthesis.speaking) { speechSynthesis.cancel(); yaz(false); return; }
+      const s = new SpeechSynthesisUtterance(metin());
+      s.lang = ses()?.lang || dil;
+      s.voice = ses() || null;
+      s.onend = () => yaz(false);
+      s.onerror = () => yaz(false);
+      yaz(true);
+      speechSynthesis.speak(s);
+    });
+  })();
+</script>

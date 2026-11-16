@@ -1,148 +1,67 @@
-<section class="modulex-values">
-  <div class="modulex-values-container">
-    <div class="modulex-values-header">
-      <div class="modulex-values-badge">{{badge}}</div>
-      <h2 class="modulex-values-title">{{title}}</h2>
-      <p class="modulex-values-desc">{{description}}</p>
-    </div>
-    <div class="modulex-values-grid">
-      {{html}}
-    </div>
+<section class="modulex-deger-yorunge{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-deger-yorunge-ic">
+    {{fbbas}}
+    {{fbgovde}}
   </div>
 </section>
 
 <style>
-  .modulex-values {
-    width: 100%;
-    padding: 72px 20px;
-    background: --bgcolor--;
-    box-sizing: border-box;
-  }
+  /* deger-yorunge — Merkezden dışa (hub & spoke) hiyerarşi: başlık çekirdek, değerler çevresinde; doğrusal ızgara değil. */
+  .modulex-deger-yorunge { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-deger-yorunge *, .modulex-deger-yorunge *::before, .modulex-deger-yorunge *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-deger-yorunge :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-deger-yorunge :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-deger-yorunge :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-deger-yorunge :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-deger-yorunge img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-deger-yorunge) img { height: auto; }
+  .modulex-deger-yorunge [hidden] { display: none !important; }
+  .modulex-deger-yorunge :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-deger-yorunge :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-deger-yorunge-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-deger-yorunge-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-deger-yorunge--bassiz .modulex-deger-yorunge-bas { display: none; }
+  .modulex-deger-yorunge-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-deger-yorunge-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-deger-yorunge-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-deger-yorunge-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-deger-yorunge-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-deger-yorunge-dugme:hover { transform: translateY(-2px); }
+  .modulex-deger-yorunge-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-deger-yorunge-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-deger-yorunge-dugme .material-symbols-outlined { font-size: 20px; }
 
-  .modulex-values-container {
-    max-width: --max--;
-    margin: 0 auto;
-  }
-
-  .modulex-values-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  .modulex-values-badge {
-    display: inline-block;
-    padding: 6px 18px;
-    background: --badgebg--;
-    color: --badgecolor--;
-    border-radius: 50px;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 16px;
-  }
-
-  /* Rozet bos birakilirsa (metin yok) bos pil cizilmesin */
-  .modulex-values-badge:empty {
-    display: none;
-  }
-
-  .modulex-values-title {
-    font-size: 34px;
-    font-weight: 800;
-    color: --titlecolor--;
-    margin: 0 0 12px;
-  }
-
-  .modulex-values-desc {
-    font-size: 16px;
-    color: --textcolor--;
-    max-width: 640px;
-    margin: 0 auto;
-    line-height: 1.7;
-  }
-
-  .modulex-values-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-  }
-
-  .modulex-values-card {
-    background: --cardbg--;
-    border-radius: 14px;
-    padding: 28px 22px;
-    text-align: center;
-    box-shadow: 0 8px 24px rgba(27, 58, 107, 0.08);
-    border: 1px solid rgba(27, 58, 107, 0.06);
-    animation: modulexValuesIn 0.55s ease both;
-    transition: transform 0.28s ease, box-shadow 0.28s ease;
-  }
-
-  .modulex-values-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 32px rgba(46, 107, 255, 0.14);
-  }
-
-  @keyframes modulexValuesIn {
-    from { opacity: 0; transform: translateY(16px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  .modulex-values-icon {
-    width: 56px;
-    height: 56px;
-    margin: 0 auto 16px;
-    border-radius: 50%;
-    background: rgba(46, 107, 255, 0.12);
-    color: --accent--;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .modulex-values-icon .material-symbols-outlined {
-    font-size: 28px;
-    line-height: 1;
-  }
-
-  .modulex-values-card-title {
-    font-size: 18px;
-    font-weight: 700;
-    color: --titlecolor--;
-    margin: 0 0 10px;
-  }
-
-  .modulex-values-card-text {
-    font-size: 14px;
-    line-height: 1.65;
-    color: --textcolor--;
-    margin: 0;
-  }
-
-  @media (max-width: 1024px) {
-    .modulex-values-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
+  .modulex-deger-yorunge-yorunge { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: repeat(3, auto); gap: 24px; align-items: center; }
+  .modulex-deger-yorunge-liste { display: contents; }
+  .modulex-deger-yorunge-merkez { position: relative; grid-area: 2 / 2; display: grid; place-content: center; justify-items: center; gap: 8px; aspect-ratio: 1; max-width: 300px; width: 100%; margin-inline: auto; padding: 36px; border-radius: 50%; background: --vurguBg--; color: --vurguText--; text-align: center; }
+  .modulex-deger-yorunge-merkez .modulex-deger-yorunge-ust { color: inherit; opacity: 1; }
+  .modulex-deger-yorunge-merkez .modulex-deger-yorunge-baslik { font-size: clamp(1.3rem, 2.2vw, 1.9rem); }
+  .modulex-deger-yorunge-halka { position: absolute; inset: -18px; border: 2px dashed --cizgi--; border-radius: 50%; animation: modulex-deger-yorunge-don 40s linear infinite; }
+  .modulex-deger-yorunge-oge { position: relative; grid-row: var(--r); grid-column: var(--c); display: grid; justify-items: center; gap: 8px; padding: 18px; text-align: center; border-radius: --yuvarlak--; transition: background 0.3s ease; }
+  .modulex-deger-yorunge-oge:hover { background: --kartBg--; }
+  .modulex-deger-yorunge-ikon { display: inline-grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; border: 2px solid --accent--; color: --accentInk--; font-size: 26px; background: --bg--; }
+  .modulex-deger-yorunge-kbaslik { font-size: 1.1rem; font-weight: 700; }
+  .modulex-deger-yorunge-kmetin { max-width: 32ch; color: --muted--; font-size: 0.95rem; }
+  .modulex-deger-yorunge-alt { max-width: 680px; margin: 32px auto 0; text-align: center; }
+  @keyframes modulex-deger-yorunge-don { to { transform: rotate(360deg); } }
   @media (max-width: 768px) {
-    .modulex-values {
-      padding: 48px 14px;
-    }
-
-    .modulex-values-grid {
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-
-    .modulex-values-title {
-      font-size: 28px;
-    }
+    .modulex-deger-yorunge-yorunge { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; }
+    .modulex-deger-yorunge-merkez { grid-area: auto; max-width: 240px; margin-block-end: 20px; }
+    .modulex-deger-yorunge-oge { grid-row: auto; grid-column: auto; }
   }
+  .modulex-deger-yorunge-bag { color: inherit; text-decoration: none; }
+  .modulex-deger-yorunge-bag::after { content: ""; position: absolute; inset: 0; z-index: 3; }
+  .modulex-deger-yorunge-bag:hover { text-decoration: underline; text-underline-offset: 4px; }
 
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-deger-yorunge :is(.modulex-deger-yorunge-baslik, .modulex-deger-yorunge-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-deger-yorunge-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-deger-yorunge { padding-inline: 16px; }
+  }
   @media (prefers-reduced-motion: reduce) {
-    .modulex-values-card {
-      animation: none !important;
-      transition: none !important;
-    }
+    .modulex-deger-yorunge *, .modulex-deger-yorunge *::before, .modulex-deger-yorunge *::after { animation: none !important; transition: none !important; }
   }
 </style>
